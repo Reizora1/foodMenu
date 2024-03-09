@@ -50,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('click', function (event) {
     if (!event.target.closest('.card') && !event.target.closest('.popup-content')) {
-        // Clicked outside of both card and popup-content
         closePopup('bestSellerPopup');
         closePopup('popularMealPopup');
         closePopup('budgetMealPopup');

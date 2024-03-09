@@ -26,7 +26,7 @@ body {
 
 .logo{
   background-color: gray;
-  height: 15vw; /* Responsive font size based on viewport width */
+  height: 15vw;
   width: 15vw;
   border-radius: 200px;
   margin-top: 25px;
@@ -144,7 +144,7 @@ p2 {
 }
 
 .imgLogo {
-  height: 15vw; /* Responsive font size based on viewport width */
+  height: 15vw;
   width: 15vw;
   border-radius:200px;
 }
@@ -161,10 +161,10 @@ li {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 50px; /* Adjust the font size as needed */
+  font-size: 50px;
   background: none;
   border: none;
-  color: gray; /* Adjust the color as needed */
+  color: gray;
   cursor: pointer;
 }
 
@@ -178,7 +178,6 @@ li {
   transform: translateY(-50%);
 }
 
-/* Add this to your existing CSS */
 .popup {
   display: none;
   position: fixed;
