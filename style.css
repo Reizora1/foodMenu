@@ -1,59 +1,151 @@
 * {
-  padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 body {
   font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
 
-.logoArea {
-  position: relative;
-  height: 250px;
-  width: 750px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: right;
-  align-items: center;
+.navbar-brand {
+  font-size: 1.5em;
+}
+
+#headercol {
   background-color: #eb831f;
-  margin-top: 75px;
-  position: absolute;
 }
 
-.logoArea h1{
-  color: white;
-  background-color: red;
+.logocontainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: auto;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-right: 75px;
-  position: absolute;
 }
 
 .logo{
   background-color: gray;
-  height: 200px;
-  width: 200px;
-  border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
+  height: 15vw; /* Responsive font size based on viewport width */
+  width: 15vw;
+  border-radius: 200px;
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-right: 500px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-img {
-  height:200px;
-  width:200px;
+.titleArea {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 25px;
+}
+.subTitleArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  color: white;
+  font-size: 5vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p2 {
+  color: white;
+  font-size: 2vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+  position: relative;
+  width: 400px;
+  height: 244px;
+  background: #8cad5c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 25px;
+}
+
+.card-holder-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: auto;
+  width: auto;
+  position: relative;
+  margin: 25px;
+}
+
+.card::before,.card::after {
+  position: absolute;
+  content: "";
+  width: 20%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #1c592a;
+  transition: all 0.5s;
+}
+  
+.card::before {
+  top: 0;
+  right: 0;
+  border-radius: 0 15px 0 100%;
+}
+
+.card::after {
+  bottom: 0;
+  left: 0;
+  border-radius: 0 100%  0 15px;
+}
+
+.card:hover::before,
+.card:hover:after {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.card:hover:after {
+  content: "View Details";
+}
+
+.card-holder-cont{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.slideshow {
+  height: 550px;
+  width: 100%;
+  border-radius: 45px;
+  margin: 25px;
+}
+
+.slideshow1 {
+  height: auto;
+  width: 100%;
+  border-radius: 45px;
+  background-color: bisque;
+  color: gray;
+  margin: 25px;
+}
+
+.imgLogo {
+  height: 15vw; /* Responsive font size based on viewport width */
+  width: 15vw;
   border-radius:200px;
 }
 
@@ -61,3 +153,86 @@ li {
   margin-right: 1rem;
 }
 
+#selections {
+  background-color: bisque;
+}
+
+.arrow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 50px; /* Adjust the font size as needed */
+  background: none;
+  border: none;
+  color: gray; /* Adjust the color as needed */
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 0px;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  right: -45px;
+  transform: translateY(-50%);
+}
+
+/* Add this to your existing CSS */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: slideIn 0.5s ease-in-out;
+  background-color: bisque;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -60%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cardmeals {
+  height: 340px;
+  width: 720px;
+}

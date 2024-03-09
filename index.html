@@ -8,10 +8,10 @@
   <title>Food Affordable</title>
 </head>
 <body>
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">FOOD AFFORDABLE</a>
+        <a class="navbar-brand" href="#">FOODAFFORDABLE</a>
       </div>
       <ul class="nav navbar-nav navbar-right">
         <li class="allmenu"><a href="#allmenu">All Menu</a></li>
@@ -30,13 +30,94 @@
     </div>
   </nav>
 
-  <div class="logoArea">
-    <div class="logo">
-      <img src="images/logo.png" alt="Logo">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-sm-12" id="headercol">
+        <div class="col-sm-3">
+          <div class="logocontainer">
+            <div class="logo">
+              <img class="imgLogo" src="images/logo.png" alt="Logo">
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="titleArea">
+            <p>"Foodaffordable"</p>
+          </div>
+          <div class="subTitleArea">
+            <p2>-Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p2>
+          </div>
+        </div>
+      </div>
     </div>
-    <h1>FOOD AFFORDABLE</h1>
   </div>
 
+  <div class="container-fluid" id="selections">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card-holder-cont">
+          <div class="card" onclick="openPopup('bestSellerPopup')">
+            BEST SELLER MEAL
+          </div>
+          <div class="card" onclick="openPopup('popularMealPopup')">
+            MOST POPULAR MEAL
+          </div>
+          <div class="card" onclick="openPopup('budgetMealPopup')">
+            BUDGET MEAL
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="popup" id="bestSellerPopup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('bestSellerPopup')">&times;</span>
+      <h2>BEST SELLER</h2>
+      <img class="cardmeals" src="images/best.png" alt="bestseller">
+    </div>
+  </div>
+  <div class="popup" id="popularMealPopup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('popularMealPopup')">&times;</span>
+      <h2>MOST POPULAR</h2>
+      <img class="cardmeals" src="images/mostpopular.png" alt="bestseller">
+    </div>
+  </div>
+  <div class="popup" id="budgetMealPopup">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup('budgetMealPopup')">&times;</span>
+      <h2>BUDGET</h2>
+      <img class="cardmeals" src="images/budget.png" alt="bestseller">
+    </div>
+  </div>
+  
+
+  <div class="container-fluid" id="selections">
+    <div class="col-sm-12">
+      <div class="col-sm-6" onclick="plusDivs(-1)">
+        <button class="arrow-button left-arrow">&#10094;</button>
+        <img class="slideshow" src="images/breakfast.jpg">
+        <img class="slideshow" src="images/lunch.jpg">
+        <img class="slideshow" src="images/beverages.jpg">
+        <img class="slideshow" src="images/dishes.jpg">
+        <img class="slideshow" src="images/snacks.jpeg">
+        <img class="slideshow" src="images/desserts.png">
+        <button class="arrow-button right-arrow">&#10095;</button>
+      </div>
+      
+      <div class="col-sm-6" onclick="currentSlide(1)">
+        <img class="slideshow1" src="images/1.png">
+        <img class="slideshow1" src="images/2.png">
+        <img class="slideshow1" src="images/3.png">
+        <img class="slideshow1" src="images/4.png">
+        <img class="slideshow1" src="images/5.png">
+        <img class="slideshow1" src="images/6.png">
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
 </body>
 </html>
-
